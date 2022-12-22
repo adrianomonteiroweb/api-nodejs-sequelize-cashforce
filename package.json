@@ -1,0 +1,19 @@
+{
+  "name": "cashforce",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adriano Monteiro <adrianomonteiroweb@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:api": "yarn workspace @cashforce/api start",
+    "build:api": "yarn workspace @cashforce/api build",
+    "dev:api": "yarn workspace @cashforce/api dev",
+    "test:api": "yarn workspace @cashforce/api test"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
