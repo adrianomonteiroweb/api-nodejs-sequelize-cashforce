@@ -2,7 +2,7 @@ import { DataTypes, Model } from 'sequelize';
 
 import { sequelize } from '../config/config';
 
-import CNPJs from './CnpjsModel';
+import CNPJs from './CNPJsModel';
 
 class Buyers extends Model {
   id!: number;
@@ -130,8 +130,6 @@ Buyers.init(
   {
     sequelize,
     timestamps: true,
-    createdAt: true,
-    updatedAt: 'updateTimestamp',
   }
 );
 
