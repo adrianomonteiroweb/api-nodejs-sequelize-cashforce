@@ -2,6 +2,8 @@ import { DataTypes, Model } from 'sequelize';
 
 import { sequelize } from '../config/config';
 
+import CNPJs from './CnpjsModel';
+
 class Buyers extends Model {
   id!: number;
   name!: string;
@@ -132,5 +134,8 @@ Buyers.init(
     updatedAt: 'updateTimestamp',
   }
 );
+
+Buyers.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpj' });
+CNPJs.hasOne(Buyers, { foreignKey: 'cnpjId', as: 'buyer' });
 
 export default Buyers;
