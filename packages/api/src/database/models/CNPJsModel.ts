@@ -28,8 +28,6 @@ CNPJs.init(
   {
     sequelize,
     timestamps: true,
-    createdAt: true,
-    updatedAt: 'updateTimestamp',
   }
 );
 
