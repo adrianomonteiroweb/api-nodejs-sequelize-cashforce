@@ -147,7 +147,6 @@ Providers.init(
   }
 );
 
-Providers.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpj' });
-CNPJs.hasOne(Providers, { foreignKey: 'cnpjId', as: 'provider' });
+Providers.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpjs' });
 
 export default Providers;

@@ -29,6 +29,7 @@ Users.init(
     email: {
       type: DataTypes.STRING(255),
       allowNull: false,
+      unique: true,
     },
     phoneNumber: {
       type: DataTypes.STRING(255),

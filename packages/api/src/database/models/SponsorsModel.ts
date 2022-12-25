@@ -143,7 +143,6 @@ Sponsors.init(
   }
 );
 
-Sponsors.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpj' });
-CNPJs.hasOne(Sponsors, { foreignKey: 'cnpjId', as: 'sponsor' });
+Sponsors.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpjs' });
 
 export default Sponsors;

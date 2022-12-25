@@ -73,7 +73,7 @@ Offers.init(
   }
 );
 
-Offers.belongsTo(Orders, { foreignKey: 'orderId', as: 'order' });
-Offers.belongsTo(Sponsors, { foreignKey: 'sponsorId', as: 'sponsor' });
+Offers.belongsTo(Orders, { foreignKey: 'orderId', as: 'orders' });
+Offers.belongsTo(Sponsors, { foreignKey: 'sponsorId', as: 'sponsors' });
 
 export default Offers;

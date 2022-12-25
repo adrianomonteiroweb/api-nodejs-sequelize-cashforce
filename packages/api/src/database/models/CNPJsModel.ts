@@ -19,6 +19,7 @@ CNPJs.init(
     cnpj: {
       type: DataTypes.STRING(255),
       allowNull: false,
+      unique: true,
     },
     companyType: {
       type: DataTypes.STRING(255),
