@@ -22,11 +22,13 @@ class Providers extends Model {
   neighborhood!: string;
   city!: string;
   state!: string;
+  bank!: string;
+  bankAgency!: string;
+  account!: string;
   phoneNumber!: string;
   situation!: string;
   situationDate!: string;
   cnpjId!: number;
-  confirm!: number;
   email!: string;
 }
 
@@ -103,19 +105,19 @@ Providers.init(
       allowNull: false,
     },
     bank: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     bankAgency: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     account: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     documents: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     phoneNumber: {
