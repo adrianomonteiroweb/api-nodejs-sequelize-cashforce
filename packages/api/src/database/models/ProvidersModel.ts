@@ -2,6 +2,8 @@ import { DataTypes, Model } from 'sequelize';
 
 import { sequelize } from '../config/config';
 
+import CNPJs from './CNPJsModel';
+
 class Providers extends Model {
   id!: number;
   name!: string;
@@ -142,5 +144,8 @@ Providers.init(
     timestamps: true,
   }
 );
+
+Providers.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpj' });
+CNPJs.hasOne(Providers, { foreignKey: 'cnpjId', as: 'provider' });
 
 export default Providers;
