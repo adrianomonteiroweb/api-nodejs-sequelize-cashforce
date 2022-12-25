@@ -3,7 +3,7 @@
 ### HOW TO RUN THE APPLICATION
 
 - yarn
-  - Este projeto utiliza-se do gerenciador de pacotes yarn e por isso é necessária a ação de instalação dos pacotes de dependência com o comando a seguir:
+  - This project uses the yarn package manager and therefore it is necessary to install the dependency packages with the following command:
 
 ```bash
 yarn install
