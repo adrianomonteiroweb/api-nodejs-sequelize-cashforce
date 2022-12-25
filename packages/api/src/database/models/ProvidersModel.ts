@@ -46,99 +46,99 @@ Providers.init(
     },
     tradingName: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     cashforceTax: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     responsibleName: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     responsibleEmail: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     responsiblePosition: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     responsiblePhone: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     responsibleMobile: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     website: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     postalCode: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     address: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     number: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     complement: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     neighborhood: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     city: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     state: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     bank: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     bankAgency: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     account: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     documents: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     phoneNumber: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     situation: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     situationDate: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     cnpjId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     email: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
   },
   {

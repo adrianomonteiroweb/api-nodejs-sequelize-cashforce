@@ -32,27 +32,27 @@ Users.init(
     },
     phoneNumber: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     mobile: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     departament: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     verificationCode: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     emailChecked: {
       type: DataTypes.STRING(255),
-      allowNull: false,
+      allowNull: true,
     },
     cashforceAdm: {
       type: DataTypes.TINYINT,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
