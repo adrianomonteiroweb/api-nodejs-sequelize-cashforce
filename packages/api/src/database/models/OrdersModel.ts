@@ -2,6 +2,11 @@ import { DataTypes, Model } from 'sequelize';
 
 import { sequelize } from '../config/config';
 
+import Buyers from './BuyersModel';
+import CNPJs from './CNPJsModel';
+import Providers from './ProvidersModel';
+import Users from './UsersModel';
+
 class Orders extends Model {
   id!: number;
   orderNfId!: string;
@@ -120,5 +125,10 @@ Orders.init(
     timestamps: true,
   }
 );
+
+Orders.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpj' });
+Orders.belongsTo(Users, { foreignKey: 'userId', as: 'user' });
+Orders.belongsTo(Buyers, { foreignKey: 'buyerId', as: 'buyer' });
+Orders.belongsTo(Providers, { foreignKey: 'providerId', as: 'provider' });
 
 export default Orders;
