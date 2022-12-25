@@ -42,6 +42,7 @@ Orders.init(
     orderNfId: {
       type: DataTypes.STRING(255),
       allowNull: false,
+      unique: true,
     },
     orderNumber: {
       type: DataTypes.STRING(255),
@@ -50,14 +51,17 @@ Orders.init(
     orderPath: {
       type: DataTypes.STRING(255),
       allowNull: true,
+      unique: true,
     },
     orderFileName: {
       type: DataTypes.STRING(255),
       allowNull: true,
+      unique: true,
     },
     orderOriginalName: {
       type: DataTypes.STRING(255),
       allowNull: true,
+      unique: true,
     },
     emissionDate: {
       type: DataTypes.STRING(255),
@@ -126,9 +130,9 @@ Orders.init(
   }
 );
 
-Orders.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpj' });
-Orders.belongsTo(Users, { foreignKey: 'userId', as: 'user' });
-Orders.belongsTo(Buyers, { foreignKey: 'buyerId', as: 'buyer' });
-Orders.belongsTo(Providers, { foreignKey: 'providerId', as: 'provider' });
+Orders.belongsTo(Buyers, { foreignKey: 'buyerId', as: 'buyers' });
+Orders.belongsTo(Providers, { foreignKey: 'providerId', as: 'providers' });
+Orders.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpjs' });
+Orders.belongsTo(Users, { foreignKey: 'userId', as: 'users' });
 
 export default Orders;

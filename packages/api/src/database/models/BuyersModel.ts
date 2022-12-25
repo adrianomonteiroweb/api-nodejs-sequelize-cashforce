@@ -133,7 +133,6 @@ Buyers.init(
   }
 );
 
-Buyers.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpj' });
-CNPJs.hasOne(Buyers, { foreignKey: 'cnpjId', as: 'buyer' });
+Buyers.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpjs' });
 
 export default Buyers;

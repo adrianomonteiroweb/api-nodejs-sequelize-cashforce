@@ -48,6 +48,6 @@ Orderportions.init(
   }
 );
 
-Orderportions.belongsTo(Orders, { foreignKey: 'orderId', as: 'order' });
+Orderportions.belongsTo(Orders, { foreignKey: 'orderId', as: 'orders' });
 
 export default Orderportions;
