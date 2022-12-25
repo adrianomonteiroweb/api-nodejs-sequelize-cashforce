@@ -8,5 +8,5 @@ const baseURI =
     ? `http://${process.env.HOST}:${process.env.PORT}`
     : process.env.DEPLOY_URI;
 
-exports.frisbyFunction = async (method, alias, id = '') =>
-  await frisby[method](`${baseURI}/${alias}/${id}`);
+exports.frisbyFunction = async (method, alias, body = {}, id = '') =>
+  await frisby[method](`${baseURI}/${alias}/${id}`, body);
