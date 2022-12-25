@@ -2,35 +2,31 @@ import { DataTypes, Model } from 'sequelize';
 
 import { sequelize } from '../config/config';
 
-import CNPJs from './CNPJsModel';
-
-class Buyers extends Model {
+class Orders extends Model {
   id!: number;
-  name!: string;
-  tradingName!: string;
-  cashforceTax!: string;
-  responsibleName!: string;
-  responsibleEmail!: string;
-  responsiblePosition!: string;
-  responsiblePhone!: string;
-  responsibleMobile!: string;
-  website!: string;
-  postalCode!: string;
-  address!: string;
-  number!: string;
-  complement!: string;
-  neighborhood!: string;
-  city!: string;
-  state!: string;
-  phoneNumber!: string;
-  situation!: string;
-  situationDate!: string;
+  orderNfId!: string;
+  orderNumber!: string;
+  orderPath!: string;
+  orderFileName!: string;
+  orderOriginalName!: string;
+  emissionDate!: string;
+  pdfFile!: string;
+  emitedTo!: string;
+  nNf!: string;
+  CTE!: string;
+  value!: string;
   cnpjId!: number;
-  confirm!: number;
-  email!: string;
+  userId!: number;
+  buyerId!: number;
+  providerId!: number;
+  orderStatusBuyer!: string;
+  orderStatusProvider!: string;
+  deliveryReceipt!: string;
+  cargoPackingList!: string;
+  deliveryCtrc!: string;
 }
 
-Buyers.init(
+Orders.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -38,79 +34,47 @@ Buyers.init(
       primaryKey: true,
       unique: true,
     },
-    name: {
+    orderNfId: {
       type: DataTypes.STRING(255),
       allowNull: false,
     },
-    tradingName: {
+    orderNumber: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+    },
+    orderPath: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
-    cashforceTax: {
+    orderFileName: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
-    responsibleName: {
+    orderOriginalName: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
-    responsibleEmail: {
+    emissionDate: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
-    responsiblePosition: {
+    pdfFile: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
-    responsiblePhone: {
+    emitedTo: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+    },
+    nNf: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
-    responsibleMobile: {
+    CTE: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
-    website: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    postalCode: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    address: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    number: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    complement: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    neighborhood: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    city: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    state: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    phoneNumber: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    situation: {
-      type: DataTypes.STRING(255),
-      allowNull: true,
-    },
-    situationDate: {
+    value: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
@@ -118,11 +82,35 @@ Buyers.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    confirm: {
-      type: DataTypes.TINYINT,
+    userId: {
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
-    email: {
+    buyerId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    providerId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    orderStatusBuyer: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+    },
+    orderStatusProvider: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+    },
+    deliveryReceipt: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+    },
+    cargoPackingList: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+    },
+    deliveryCtrc: {
       type: DataTypes.STRING(255),
       allowNull: true,
     },
@@ -133,7 +121,4 @@ Buyers.init(
   }
 );
 
-Buyers.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpj' });
-CNPJs.hasOne(Buyers, { foreignKey: 'cnpjId', as: 'buyer' });
-
-export default Buyers;
+export default Orders;
