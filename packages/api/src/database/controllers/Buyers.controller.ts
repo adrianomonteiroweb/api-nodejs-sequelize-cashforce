@@ -19,4 +19,14 @@ export class BuyersController {
 
     return res.status(200).json(allBuyers);
   }
+
+  async createNewBuyerController(req: Request, res: Response): Promise<void> {
+    try {
+      await this._service.createNewBuyerService(req.body);
+
+      res.status(201).json({ message: 'Buyer created successfully' });
+    } catch (error: any) {
+      res.status(500).json({ message: error.message });
+    }
+  }
 }
