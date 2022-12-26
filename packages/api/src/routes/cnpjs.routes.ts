@@ -10,4 +10,8 @@ cnpjsRouter.get('/cnpjs', (req, res) =>
   cnpjsController.getAllCNPJsController(req, res)
 );
 
+cnpjsRouter.post('/cnpjs', (req, res) =>
+  cnpjsController.createNewCNPJController(req, res)
+);
+
 export default cnpjsRouter;

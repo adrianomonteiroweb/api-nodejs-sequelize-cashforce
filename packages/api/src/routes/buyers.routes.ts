@@ -10,4 +10,8 @@ buyersRouter.get('/buyers', (req, res) =>
   buyersController.getAllBuyersController(req, res)
 );
 
+buyersRouter.post('/buyers', (req, res) =>
+  buyersController.createNewBuyerController(req, res)
+);
+
 export default buyersRouter;

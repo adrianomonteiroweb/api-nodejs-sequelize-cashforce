@@ -5,7 +5,6 @@ import { sequelize } from '../config/config';
 import CNPJs from './CNPJsModel';
 
 class Buyers extends Model {
-  id!: number;
   name!: string;
   tradingName!: string;
   cashforceTax!: string;
@@ -36,6 +35,7 @@ Buyers.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
       unique: true,
     },
     name: {
