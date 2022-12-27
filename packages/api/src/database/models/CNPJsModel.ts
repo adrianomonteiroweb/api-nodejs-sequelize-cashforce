@@ -3,7 +3,6 @@ import { DataTypes, Model } from 'sequelize';
 import { sequelize } from '../config/config';
 
 class CNPJs extends Model {
-  id!: number;
   cnpj!: string;
   companyType!: string;
 }

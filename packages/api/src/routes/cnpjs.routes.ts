@@ -10,6 +10,10 @@ cnpjsRouter.get('/cnpjs', (req, res) =>
   cnpjsController.getAllCNPJsController(req, res)
 );
 
+cnpjsRouter.get('/cnpj', (req, res) =>
+  cnpjsController.getIdByCNPJController(req, res)
+);
+
 cnpjsRouter.post('/cnpjs', (req, res) =>
   cnpjsController.createNewCNPJController(req, res)
 );

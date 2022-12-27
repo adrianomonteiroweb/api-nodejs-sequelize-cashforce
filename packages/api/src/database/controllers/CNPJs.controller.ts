@@ -33,4 +33,16 @@ export class CNPJsController {
       ? res.status(201).json(cnpjIdCreated)
       : res.status(400).json(0);
   }
+
+  async getIdByCNPJController(req: Request, res: Response): Promise<Response> {
+    let idByCNPJ;
+
+    try {
+      idByCNPJ = await this._service.getIdByCNPJService(req.body.cnpj);
+    } catch (error: any) {
+      return res.status(500).json({ message: error.message });
+    }
+
+    return res.status(200).json(idByCNPJ);
+  }
 }

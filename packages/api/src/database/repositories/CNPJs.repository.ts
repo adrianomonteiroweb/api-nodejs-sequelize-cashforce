@@ -16,4 +16,10 @@ export class CNPJsRepository {
 
     return cnpjCreated.dataValues.id ? cnpjCreated.dataValues.id : false;
   }
+
+  async getIdByCNPJRepository(cnpj: string) {
+    const idByCNPJ = await this._CNPJsModel.findOne({ where: { cnpj } });
+
+    return idByCNPJ?.dataValues.id ? idByCNPJ?.dataValues.id : false;
+  }
 }
