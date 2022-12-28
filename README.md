@@ -26,3 +26,39 @@ yarn install
   ```bash
     yarn start:api
   ```
+
+  ### ROUTES
+
+  - Buyers - Method "POST" - route: "/buyers".
+
+    - To create a new buyer, it must also contain the following attributes for buyer, cnpj and company type.
+
+    Ex:
+
+    ```json
+    {
+      "name": "SACADO 004",
+      "tradingName": "SACADO 004 LTDA",
+      "cashforceTax": "0",
+      "responsibleName": "",
+      "responsibleEmail": "",
+      "responsiblePosition": "",
+      "responsiblePhone": "",
+      "responsibleMobile": "",
+      "website": "",
+      "postalCode": "",
+      "address": "",
+      "number": "",
+      "complement": "",
+      "neighborhood": "",
+      "city": "",
+      "state": "",
+      "phoneNumber": "",
+      "situation": "",
+      "situationDate": "",
+      "confirm": 4,
+      "email": "",
+      "cnpj": "00000000000010",
+      "companyType": "1"
+    }
+    ```
