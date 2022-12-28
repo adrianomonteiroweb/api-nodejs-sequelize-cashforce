@@ -19,4 +19,17 @@ export class SponsorsController {
 
     return res.status(200).json(allSponsors);
   }
+
+  async createNewSponsorController(
+    req: Request,
+    res: Response
+  ): Promise<Response> {
+    try {
+      await this._service.createNewSponsorService(req.body);
+
+      return res.status(200).json({ message: 'Sponsor created successfully' });
+    } catch (error: any) {
+      return res.status(500).json({ message: error.message });
+    }
+  }
 }
