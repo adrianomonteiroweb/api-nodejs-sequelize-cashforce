@@ -1,12 +1,6 @@
 const { frisbyFunction } = require('./frisby/frisbyFunction');
 
 describe('* BUYERS TESTS *', () => {
-  it('It must be possible to search for all buyers in the database.', async () => {
-    const resultAllBuyers = await frisbyFunction('get', 'buyers');
-
-    expect(JSON.parse(resultAllBuyers._body)).toHaveLength(1);
-  });
-
   it('It should be possible to insert a new buyer using the "buyers" route with the "post" method.', async () => {
     const newBuyer = {
       name: 'SACADO 002',
@@ -28,9 +22,10 @@ describe('* BUYERS TESTS *', () => {
       phoneNumber: '',
       situation: '',
       situationDate: '',
-      cnpjId: 2,
       confirm: 2,
       email: '',
+      cnpj: '00000000000010',
+      companyType: '1',
     };
 
     const resultAllBuyersBefore = await frisbyFunction('get', 'buyers');
@@ -42,5 +37,11 @@ describe('* BUYERS TESTS *', () => {
     expect(JSON.parse(resultAllBuyersAfter._body)).toHaveLength(
       JSON.parse(resultAllBuyersBefore._body).length + 1
     );
+  });
+
+  it('It must be possible to search for all buyers in the database.', async () => {
+    const resultAllBuyers = await frisbyFunction('get', 'buyers');
+
+    expect(JSON.parse(resultAllBuyers._body)).not.toHaveLength(0);
   });
 });
