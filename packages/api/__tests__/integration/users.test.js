@@ -2,7 +2,16 @@ const { frisbyFunction } = require('./frisby/frisbyFunction');
 
 describe('* USERS TESTS *', () => {
   it('It should be possible to insert a new user using the "users" route with the "post" method', async () => {
-    const newUser = {};
+    const newUser = {
+      name: 'user 1',
+      email: 'user1@email.com',
+      phoneNumber: '',
+      mobile: '',
+      departament: '',
+      verificationCode: '',
+      emailChecked: 0,
+      cashforceAdm: 0,
+    };
 
     const resultAllUsersBefore = await frisbyFunction('get', 'users');
 
