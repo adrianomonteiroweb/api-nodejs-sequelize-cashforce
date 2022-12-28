@@ -10,4 +10,8 @@ sponsorsRouter.get('/sponsors', (req, res) =>
   sponsorsController.getAllSponsorsController(req, res)
 );
 
+sponsorsRouter.post('/sponsors', (req, res) =>
+  sponsorsController.createNewSponsorController(req, res)
+);
+
 export default sponsorsRouter;

@@ -31,7 +31,7 @@ yarn install
 
   - Buyers - Method "POST" - route: "/buyers".
 
-    - To create a new buyer, it must also contain the following attributes for buyer, cnpj and company type.
+    - To create a new buyer, it must also contain the following attributes for buyer, cnpj and company type too.
 
     Ex:
 
@@ -59,6 +59,74 @@ yarn install
       "confirm": 4,
       "email": "",
       "cnpj": "00000000000010",
+      "companyType": "1"
+    }
+    ```
+
+  - CNPJs - Method "POST" - route: "/cnpjs".
+
+    - To create a new CNPJ, it must also contain the following attributes: cnpj and company type.
+
+    Ex:
+
+    ```json
+    {
+      "cnpj": "00000000000001",
+      "companyType": "1"
+    }
+    ```
+
+  - Users - Method "POST" - route: "/users".
+
+    - To create a new user, it must also contain the following attributes:
+
+    Ex:
+
+    ```json
+    {
+      "name": "user 1",
+      "email": "user1@email.com",
+      "phoneNumber": "",
+      "mobile": "",
+      "departament": "",
+      "verificationCode": "",
+      "emailChecked": 0,
+      "cashforceAdm": 0
+    }
+    ```
+
+  - Sponsors - Method "POST" - route: "/sponsors".
+
+    - To create a new Sponsor, it must also contain the following attributes for Sponsor, cnpj and company type too.
+
+    Ex:
+
+    ```json
+    {
+      "name": "Sponsor 1",
+      "tradingName": "",
+      "cashforceTax": "",
+      "responsibleName": "",
+      "responsibleEmail": "",
+      "responsiblePosition": "",
+      "responsiblePhone": "",
+      "responsibleMobile": "",
+      "website": "",
+      "postalCode": "",
+      "address": "",
+      "number": "",
+      "complement": "",
+      "neighborhood": "",
+      "city": "",
+      "state": "",
+      "bank": "",
+      "bankAgency": "",
+      "account": "",
+      "phoneNumber": "",
+      "situation": "",
+      "situationDate": "",
+      "email": "",
+      "cnpj": "00000000000011",
       "companyType": "1"
     }
     ```
