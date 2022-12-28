@@ -10,4 +10,8 @@ providersRouter.get('/providers', (req, res) =>
   providersController.getAllProvidersController(req, res)
 );
 
+providersRouter.post('/providers', (req, res) =>
+  providersController.createNewProviderController(req, res)
+);
+
 export default providersRouter;
