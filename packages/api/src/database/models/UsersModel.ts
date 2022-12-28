@@ -3,7 +3,6 @@ import { DataTypes, Model } from 'sequelize';
 import { sequelize } from '../config/config';
 
 class Users extends Model {
-  id!: number;
   name!: string;
   email!: string;
   phoneNumber!: string;
@@ -20,6 +19,7 @@ Users.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
       unique: true,
     },
     name: {

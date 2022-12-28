@@ -10,4 +10,8 @@ usersRouter.get('/users', (req, res) =>
   usersController.getAllUsersController(req, res)
 );
 
+usersRouter.post('/users', (req, res) =>
+  usersController.createNewUserController(req, res)
+);
+
 export default usersRouter;
