@@ -130,3 +130,40 @@ yarn install
       "companyType": "1"
     }
     ```
+
+  - Providers - Method "POST" - route: "/providers".
+
+        - To create a new Provider, it must also contain the following attributes for Provider, cnpj and company type too.
+
+        Ex:
+
+        ```json
+        {
+          "name": "Sponsor 2",
+          "tradingName": "PROVIDER 001 LTDA",
+          "cashforceTax": "",
+          "responsibleName": "",
+          "responsibleEmail": "",
+          "responsiblePosition": "",
+          "responsiblePhone": "",
+          "responsibleMobile": "",
+          "website": "",
+          "postalCode": "",
+          "address": "",
+          "number": "",
+          "complement": "",
+          "neighborhood": "",
+          "city": "",
+          "state": "",
+          "bank": "",
+          "bankAgency": "",
+          "account": "",
+          "documents": "",
+          "phoneNumber": "",
+          "situation": "",
+          "situationDate": "",
+          "email": "",
+          "cnpj": "00000000000011",
+          "companyType": "1"
+        }
+        ```
