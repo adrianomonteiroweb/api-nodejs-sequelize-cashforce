@@ -1,5 +1,5 @@
 export interface IBuyer {
-  cnpj: string;
+  name: string;
   tradingName?: string;
   cashforceTax?: string;
   responsibleName?: string;
@@ -21,4 +21,6 @@ export interface IBuyer {
   cnpjId?: number;
   confirm?: number;
   email?: string;
+  cnpj: string;
+  companyType: string;
 }

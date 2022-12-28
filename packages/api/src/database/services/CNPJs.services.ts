@@ -18,4 +18,10 @@ export class CNPJsService {
 
     return cnpjIdCreated ? cnpjIdCreated : false;
   }
+
+  async getIdByCNPJService(cnpj: string) {
+    const idByCNPJ = await this._CNPJsRepository.getIdByCNPJRepository(cnpj);
+
+    return idByCNPJ;
+  }
 }
