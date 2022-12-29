@@ -14,4 +14,14 @@ export class BuyersRepository {
   async createNewBuyerRepository(newBuyer: IBuyer | any) {
     await this._buyersModel.create(newBuyer);
   }
+
+  async getIdByBuyerEmailRepository(email: string) {
+    const idByBuyerEmail = await this._buyersModel.findOne({
+      where: { email },
+    });
+
+    return idByBuyerEmail?.dataValues.id
+      ? idByBuyerEmail?.dataValues.id
+      : false;
+  }
 }

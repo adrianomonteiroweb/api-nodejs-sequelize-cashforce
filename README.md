@@ -31,7 +31,7 @@ yarn install
 
   - Buyers - Method "POST" - route: "/buyers".
 
-    - To create a new buyer, it must also contain the following attributes for buyer, cnpj and company type too.
+    - To create a new buyer, it must also contain the following attributes for buyer: cnpj and company type too.
 
     Ex:
 
@@ -97,7 +97,7 @@ yarn install
 
   - Sponsors - Method "POST" - route: "/sponsors".
 
-    - To create a new Sponsor, it must also contain the following attributes for Sponsor, cnpj and company type too.
+    - To create a new Sponsor, it must also contain the following attributes for Sponsor: cnpj and company type too.
 
     Ex:
 
@@ -133,7 +133,7 @@ yarn install
 
   - Providers - Method "POST" - route: "/providers".
 
-        - To create a new Provider, it must also contain the following attributes for Provider, cnpj and company type too.
+        - To create a new Provider, it must also contain the following attributes for Provider: cnpj and company type too.
 
         Ex:
 
@@ -165,5 +165,36 @@ yarn install
           "email": "",
           "cnpj": "00000000000011",
           "companyType": "1"
+        }
+        ```
+
+  - Orders - Method "POST" - route: "/orders".
+
+        - To create a new Order, it must also contain the following attributes for Order: cnpj, userEmail, buyerEmail and providerEmail too.
+
+        Ex:
+
+        ```json
+        {
+          "orderNfId": "1605181324131",
+          "orderNumber": "18150",
+          "orderPath": "0",
+          "orderFileName": "",
+          "orderOriginalName": "",
+          "emissionDate": "",
+          "pdfFile": "",
+          "emitedTo": "22843980000121",
+          "nNf": "",
+          "CTE": "",
+          "value": "",
+          "cnpj": "00000000000010",
+          "userEmail": "user1@email.com",
+          "buyerEmail": "buyer1@email.com",
+          "providerEmail": "provider1@email.com",
+          "orderStatusBuyer": "",
+          "orderStatusProvider": "",
+          "deliveryReceipt": "",
+          "cargoPackingList": "",
+          "deliveryCtrc": ""
         }
         ```

@@ -8,7 +8,6 @@ import Providers from './ProvidersModel';
 import Users from './UsersModel';
 
 class Orders extends Model {
-  id!: number;
   orderNfId!: string;
   orderNumber!: string;
   orderPath!: string;
@@ -37,6 +36,7 @@ Orders.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
       unique: true,
     },
     orderNfId: {

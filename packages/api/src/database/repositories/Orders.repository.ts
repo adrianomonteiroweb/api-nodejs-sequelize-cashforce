@@ -1,3 +1,4 @@
+import { IOrder } from '../interfaces/IOrder';
 import OrdersModel from '../models/OrdersModel';
 
 export class OrdersRepository {
@@ -7,5 +8,9 @@ export class OrdersRepository {
     const allOrders = await this._ordersModel.findAll();
 
     return allOrders;
+  }
+
+  async createNewOrderRepository(order: IOrder | any) {
+    await this._ordersModel.create(order);
   }
 }
