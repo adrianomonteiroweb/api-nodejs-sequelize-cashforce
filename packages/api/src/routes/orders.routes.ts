@@ -10,4 +10,8 @@ ordersRouter.get('/orders', (req, res) =>
   ordersController.getAllOrdersController(req, res)
 );
 
+ordersRouter.post('/orders', (req, res) =>
+  ordersController.createNewOrderController(req, res)
+);
+
 export default ordersRouter;
