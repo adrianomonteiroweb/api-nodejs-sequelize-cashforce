@@ -133,68 +133,68 @@ yarn install
 
   - Providers - Method "POST" - route: "/providers".
 
-        - To create a new Provider, it must also contain the following attributes for Provider: cnpj and company type too.
+    - To create a new Provider, it must also contain the following attributes for Provider: cnpj and company type too.
 
-        Ex:
+    Ex:
 
-        ```json
-        {
-          "name": "Sponsor 2",
-          "tradingName": "PROVIDER 001 LTDA",
-          "cashforceTax": "",
-          "responsibleName": "",
-          "responsibleEmail": "",
-          "responsiblePosition": "",
-          "responsiblePhone": "",
-          "responsibleMobile": "",
-          "website": "",
-          "postalCode": "",
-          "address": "",
-          "number": "",
-          "complement": "",
-          "neighborhood": "",
-          "city": "",
-          "state": "",
-          "bank": "",
-          "bankAgency": "",
-          "account": "",
-          "documents": "",
-          "phoneNumber": "",
-          "situation": "",
-          "situationDate": "",
-          "email": "",
-          "cnpj": "00000000000011",
-          "companyType": "1"
-        }
-        ```
+    ```json
+    {
+      "name": "Sponsor 2",
+      "tradingName": "PROVIDER 001 LTDA",
+      "cashforceTax": "",
+      "responsibleName": "",
+      "responsibleEmail": "",
+      "responsiblePosition": "",
+      "responsiblePhone": "",
+      "responsibleMobile": "",
+      "website": "",
+      "postalCode": "",
+      "address": "",
+      "number": "",
+      "complement": "",
+      "neighborhood": "",
+      "city": "",
+      "state": "",
+      "bank": "",
+      "bankAgency": "",
+      "account": "",
+      "documents": "",
+      "phoneNumber": "",
+      "situation": "",
+      "situationDate": "",
+      "email": "",
+      "cnpj": "00000000000011",
+      "companyType": "1"
+    }
+    ```
 
   - Orders - Method "POST" - route: "/orders".
 
-        - To create a new Order, it must also contain the following attributes for Order: cnpj, userEmail, buyerEmail and providerEmail too.
+    - To create a new Order, it must also contain the following attributes for Order: cnpj, userEmail, buyerEmail and providerEmail too.
 
-        Ex:
+    Ex:
 
-        ```json
-        {
-          "orderNfId": "1605181324131",
-          "orderNumber": "18150",
-          "orderPath": "0",
-          "orderFileName": "",
-          "orderOriginalName": "",
-          "emissionDate": "",
-          "pdfFile": "",
-          "emitedTo": "22843980000121",
-          "nNf": "",
-          "CTE": "",
-          "value": "",
-          "cnpj": "00000000000010",
-          "userEmail": "user1@email.com",
-          "buyerEmail": "buyer1@email.com",
-          "providerEmail": "provider1@email.com",
-          "orderStatusBuyer": "",
-          "orderStatusProvider": "",
-          "deliveryReceipt": "",
-          "cargoPackingList": "",
-          "deliveryCtrc": ""
-        }
-        ```
+    ```json
+    {
+      "orderNfId": "1605181324131",
+      "orderNumber": "18150",
+      "orderPath": "0",
+      "orderFileName": "",
+      "orderOriginalName": "",
+      "emissionDate": "",
+      "pdfFile": "",
+      "emitedTo": "22843980000121",
+      "nNf": "",
+      "CTE": "",
+      "value": "",
+      "cnpj": "00000000000010",
+      "userEmail": "user1@email.com",
+      "buyerEmail": "buyer1@email.com",
+      "providerEmail": "provider1@email.com",
+      "orderStatusBuyer": "",
+      "orderStatusProvider": "",
+      "deliveryReceipt": "",
+      "cargoPackingList": "",
+      "deliveryCtrc": ""
+    }
+    ```
