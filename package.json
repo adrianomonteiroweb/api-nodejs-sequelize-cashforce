@@ -9,7 +9,9 @@
     "start:api": "yarn workspace @cashforce/api start",
     "build:api": "yarn workspace @cashforce/api build",
     "dev:api": "yarn workspace @cashforce/api dev",
-    "test:api": "yarn workspace @cashforce/api test"
+    "test:api": "yarn workspace @cashforce/api test",
+    "serve:web": "yarn workspace @cashforce/web serve",
+    "build:web": "yarn workspace @cashforce/web build"
   },
   "workspaces": {
     "packages": [
