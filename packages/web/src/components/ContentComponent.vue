@@ -2,14 +2,23 @@
   <div class="content-div">
     <div class="bar"></div>
     <div class="content">
-      <h1>Content</h1>
+      <h1>Notas Fiscais</h1>
+      <span>Visualize as notas fiscais que você tem.</span>
+      <table>
+        <HeadTableNFComponentVue />
+      </table>
     </div>
   </div>
 </template>
 
 <script>
+import HeadTableNFComponentVue from './HeadTableNFComponent.vue';
+
 export default {
   name: 'ContentComponent',
+  components: {
+    HeadTableNFComponentVue,
+  },
 };
 </script>
 
