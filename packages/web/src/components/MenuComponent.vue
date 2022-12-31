@@ -20,12 +20,21 @@ export default {
   display: flex;
   flex-direction: column;
   height: 500px;
-  width: 200px;
+  width: 15%;
 }
 
 .menu-div .logo-div {
   border: 1px solid green;
   height: 100px;
   width: 100px;
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
 }
 </style>

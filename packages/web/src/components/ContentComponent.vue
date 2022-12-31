@@ -20,7 +20,7 @@ export default {
   flex-direction: column;
   height: 500px;
   justify-content: center;
-  width: 400px;
+  width: 85%;
 }
 
 .content-div .bar {
@@ -31,5 +31,14 @@ export default {
 
 .content-div .content {
   height: 90%;
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
 }
 </style>
