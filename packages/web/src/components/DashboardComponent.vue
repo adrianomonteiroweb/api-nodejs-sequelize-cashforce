@@ -21,5 +21,6 @@ export default {
 <style>
 .dashboard-div {
   display: flex;
+  justify-content: space-between;
 }
 </style>
