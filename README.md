@@ -9,22 +9,32 @@
 yarn install
 ```
 
-- .env
+- BACK-END
 
-  - Use the .env.example file to locally configure the server, as well as database and other settings.
+  - .env
 
-- api
+    - Use the .env.example file to locally configure the server, as well as database and other settings.
 
-  - To run the server locally, just run the following command. It will use nodemon and ts-node packages.
+  - api
+
+    - To run the server locally, just run the following command. It will use nodemon and ts-node packages.
+
+    ```bash
+      yarn dev:api
+    ```
+
+    - To run the server in production/build, run the following command:
+
+    ```bash
+      yarn start:api
+    ```
+
+- FRONT-END
+
+  - To run the frontend, run the command:
 
   ```bash
-    yarn dev:api
-  ```
-
-  - To run the server in production/build, run the following command:
-
-  ```bash
-    yarn start:api
+    yarn serve:web
   ```
 
   ### ROUTES
