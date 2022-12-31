@@ -2,14 +2,19 @@
   <div class="menu-div">
     <div class="logo-div">Logo</div>
     <div class="menu">
-      <h1>Menu</h1>
+      <ul>
+        <ItemMenuComponent />
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
+import ItemMenuComponent from './ItemMenuComponent.vue';
+
 export default {
   name: 'MenuComponent',
+  components: { ItemMenuComponent },
 };
 </script>
 

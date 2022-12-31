@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import ContentComponent from './ContentComponent.vue';
-import MenuComponentVue from './MenuComponent.vue';
+import ContentComponent from '../components/ContentComponent.vue';
+import MenuComponentVue from '../components/MenuComponent.vue';
 
 export default {
   name: 'DashboardComponent',
