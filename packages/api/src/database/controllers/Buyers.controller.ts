@@ -17,7 +17,10 @@ export class BuyersController {
       return res.status(500).json({ message: error.message });
     }
 
-    return res.status(200).json(allBuyers);
+    return res
+      .header('Access-Control-Allow-Origin', '*')
+      .status(200)
+      .json(allBuyers);
   }
 
   async createNewBuyerController(req: Request, res: Response): Promise<void> {
