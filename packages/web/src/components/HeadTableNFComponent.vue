@@ -15,4 +15,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+th {
+  color: #dfe2eb;
+}
+</style>

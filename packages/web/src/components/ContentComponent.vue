@@ -1,4 +1,4 @@
-<template>
+<template setub lang="vue">
   <div class="content-div">
     <div class="bar"></div>
     <div class="content">
@@ -6,18 +6,53 @@
       <span>Visualize as notas fiscais que você tem.</span>
       <table>
         <HeadTableNFComponentVue />
+        <RowsTableNFComponentVue
+          :dataBuyers=dataBuyers
+          :dataProviders=dataProviders
+        />
       </table>
     </div>
   </div>
 </template>
 
 <script>
+import axiosFunctions from '@/composables/AxiosFunctions';
 import HeadTableNFComponentVue from './HeadTableNFComponent.vue';
+import RowsTableNFComponentVue from './RowsTableNFComponent.vue';
+
+const fetchBuyers = async () => {
+  const fetchResult = await axiosFunctions('http://localhost:3333/buyers');
+
+  const result = await fetchResult;
+
+  return result;
+};
+
+const fetchProviders = async () => {
+  const fetchResult = await axiosFunctions('http://localhost:3333/providers');
+
+  const result = await fetchResult;
+
+  return result;
+};
 
 export default {
   name: 'ContentComponent',
   components: {
     HeadTableNFComponentVue,
+    RowsTableNFComponentVue,
+  },
+  data() {
+    return {
+      dataBuyers: this.dataBuyers,
+      dataProviders: this.dataProviders,
+    };
+  },
+  async created() {
+    const buyersResponse = fetchBuyers();
+    this.dataBuyers = await buyersResponse;
+    const providersResponse = fetchProviders();
+    this.dataProviders = await providersResponse;
   },
 };
 </script>
