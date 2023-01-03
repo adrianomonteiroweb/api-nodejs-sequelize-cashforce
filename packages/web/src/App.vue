@@ -14,10 +14,6 @@ export default {
 </script>
 
 <style>
-#app {
-  border: 1px solid black;
-}
-
 @media (max-width: 1440px) {
   #app {
     min-height: 640px;

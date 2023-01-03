@@ -8,4 +8,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+li {
+  color: #00ad8c;
+}
+</style>

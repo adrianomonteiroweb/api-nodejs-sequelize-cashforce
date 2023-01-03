@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import path from 'path';
+import cors from 'cors';
 
 dotenv.config({ path: path.join(__dirname, '../../../.env') });
 
@@ -8,6 +9,7 @@ import app from './app';
 import { routes } from './routes';
 
 app.use(routes);
+app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || 'localhost';
