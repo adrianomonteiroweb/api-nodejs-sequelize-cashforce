@@ -7,8 +7,8 @@
     <td>{{ dataInvoice.id }}</td>
     <td>{{ dataInvoice.buyer.name }}</td>
     <td>{{ dataInvoice.provider.name }}</td>
-    <td>{{ dataInvoice.emissionDate }}</td>
-    <td>{{ dataInvoice.value }}</td>
+    <td>{{ formatDate(dataInvoice.emissionDate) }}</td>
+    <td>{{ formatValueBRLCurrencyFunction(dataInvoice.value) }}</td>
     <td class="status">
       {{ statusOrderFunction(dataInvoice.orderStatusBuyer) }}
     </td>
@@ -18,7 +18,11 @@
 
 <script>
 import GivesInButtonComponentVue from './GivesInButtonComponent.vue';
-import { statusOrderFunction } from '@/utis/functions';
+import {
+  statusOrderFunction,
+  formatValueBRLCurrencyFunction,
+  formatDate,
+} from '@/utis/functions';
 
 export default {
   name: 'RowsTableNFComponent',
@@ -32,6 +36,8 @@ export default {
   },
   methods: {
     statusOrderFunction,
+    formatValueBRLCurrencyFunction,
+    formatDate,
   },
 };
 </script>
