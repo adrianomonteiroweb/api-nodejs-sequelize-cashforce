@@ -70,10 +70,8 @@ Offers.init(
   {
     sequelize,
     timestamps: true,
+    tableName: 'offers',
   }
 );
-
-Offers.belongsTo(Orders, { foreignKey: 'orderId', as: 'orders' });
-Offers.belongsTo(Sponsors, { foreignKey: 'sponsorId', as: 'sponsors' });
 
 export default Offers;

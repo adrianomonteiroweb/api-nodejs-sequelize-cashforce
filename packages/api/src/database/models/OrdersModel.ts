@@ -3,9 +3,7 @@ import { DataTypes, Model } from 'sequelize';
 import { sequelize } from '../config/config';
 
 import Buyers from './BuyersModel';
-import CNPJs from './CNPJsModel';
 import Providers from './ProvidersModel';
-import Users from './UsersModel';
 
 class Orders extends Model {
   orderNfId!: string;
@@ -127,12 +125,11 @@ Orders.init(
   {
     sequelize,
     timestamps: true,
+    tableName: 'orders',
   }
 );
 
-Orders.belongsTo(Buyers, { foreignKey: 'buyerId', as: 'buyers' });
-Orders.belongsTo(Providers, { foreignKey: 'providerId', as: 'providers' });
-Orders.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpjs' });
-Orders.belongsTo(Users, { foreignKey: 'userId', as: 'users' });
+Orders.belongsTo(Buyers, { as: 'buyer', foreignKey: 'buyerId' });
+Orders.belongsTo(Providers, { as: 'provider', foreignKey: 'providerId' });
 
 export default Orders;

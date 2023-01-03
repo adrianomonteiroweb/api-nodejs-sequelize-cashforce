@@ -45,9 +45,8 @@ Orderportions.init(
   {
     sequelize,
     timestamps: true,
+    tableName: 'orderportions',
   }
 );
-
-Orderportions.belongsTo(Orders, { foreignKey: 'orderId', as: 'orders' });
 
 export default Orderportions;

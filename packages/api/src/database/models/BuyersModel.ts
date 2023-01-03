@@ -2,8 +2,6 @@ import { DataTypes, Model } from 'sequelize';
 
 import { sequelize } from '../config/config';
 
-import CNPJs from './CNPJsModel';
-
 class Buyers extends Model {
   name!: string;
   tradingName!: string;
@@ -130,9 +128,8 @@ Buyers.init(
   {
     sequelize,
     timestamps: true,
+    tableName: 'buyers',
   }
 );
-
-Buyers.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpjs' });
 
 export default Buyers;
