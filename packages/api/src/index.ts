@@ -9,7 +9,11 @@ import app from './app';
 import { routes } from './routes';
 
 app.use(routes);
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:3333',
+  })
+);
 
 const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || 'localhost';

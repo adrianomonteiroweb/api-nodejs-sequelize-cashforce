@@ -29,6 +29,7 @@ CNPJs.init(
   {
     sequelize,
     timestamps: true,
+    tableName: 'cnpjs',
   }
 );
 

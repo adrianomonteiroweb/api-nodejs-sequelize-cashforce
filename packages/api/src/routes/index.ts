@@ -1,5 +1,6 @@
 import buyersRouter from './buyers.routes';
 import cnpjsRouter from './cnpjs.routes';
+import invoicesRouter from './invoices.routes';
 import offersRouter from './offers.routes';
 import orderportionsRouter from './orderportions.routes';
 import ordersRouter from './orders.routes';
@@ -16,4 +17,5 @@ export const routes = [
   ordersRouter,
   orderportionsRouter,
   offersRouter,
+  invoicesRouter,
 ];

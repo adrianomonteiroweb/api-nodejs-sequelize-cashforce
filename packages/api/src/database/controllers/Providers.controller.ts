@@ -17,7 +17,10 @@ export class ProvidersController {
       return res.status(500).json({ message: error.message });
     }
 
-    return res.status(200).json(allProviders);
+    return res
+      .header('Access-Control-Allow-Origin', '*')
+      .status(200)
+      .json(allProviders);
   }
 
   async createNewProviderController(

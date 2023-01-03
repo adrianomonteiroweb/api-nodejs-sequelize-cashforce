@@ -140,9 +140,8 @@ Sponsors.init(
   {
     sequelize,
     timestamps: true,
+    tableName: 'sponsors',
   }
 );
-
-Sponsors.belongsTo(CNPJs, { foreignKey: 'cnpjId', as: 'cnpjs' });
 
 export default Sponsors;

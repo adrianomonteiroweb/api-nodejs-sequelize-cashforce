@@ -59,6 +59,7 @@ Users.init(
   {
     sequelize,
     timestamps: true,
+    tableName: 'users',
   }
 );
 
