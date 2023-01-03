@@ -5,7 +5,7 @@
     <td>CEDENTE 002</td>
     <td>12/02/2020</td>
     <td>R$ 1.000,00</td>
-    <td>RECEBIDO</td>
+    <td class="status">RECEBIDO</td>
     <GivesInButtonComponentVue />
   </tr>
 </template>
@@ -28,17 +28,26 @@ export default {
 </script>
 
 <style>
-table {
-  border-collapse: collapse;
-}
-
 .invoices {
   border: 1px solid #dfe2eb;
-  border-radius: 6px;
-  border-spacing: 0 10px;
 }
 
-td {
-  margin: 5px;
+.status {
+  color: #00ad8c;
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1024px) {
+  .invoices td {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .invoices td {
+    font-size: 10px;
+  }
 }
 </style>

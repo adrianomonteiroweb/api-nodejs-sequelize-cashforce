@@ -23,4 +23,16 @@ export default {
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .dashboard-div {
+    flex-direction: column;
+  }
+}
 </style>

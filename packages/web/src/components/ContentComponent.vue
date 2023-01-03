@@ -4,7 +4,7 @@
     <div class="content">
       <h1>Notas Fiscais</h1>
       <span>Visualize as notas fiscais que você tem.</span>
-      <table>
+      <table class="collapse spacing">
         <HeadTableNFComponentVue />
         <RowsTableNFComponentVue
           :dataBuyers=dataBuyers
@@ -59,7 +59,7 @@ export default {
 
 <style>
 .content-div {
-  border: 1px solid blue;
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 500px;
@@ -68,13 +68,31 @@ export default {
 }
 
 .content-div .bar {
-  height: 50px;
+  height: 20px;
   border-bottom: 1px solid black;
-  width: 100%;
+  width: 90%;
 }
 
 .content-div .content {
   height: 90%;
+}
+
+.content h1 {
+  color: #021b51;
+}
+
+.content span {
+  color: #727d94;
+}
+
+.content table {
+  margin-top: 20px;
+  border-spacing: 20px 20px;
+}
+
+.spacing {
+  border-collapse: separate;
+  border-spacing: 20px;
 }
 
 @media (max-width: 1440px) {
