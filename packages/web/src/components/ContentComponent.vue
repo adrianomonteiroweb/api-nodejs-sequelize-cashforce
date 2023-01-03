@@ -7,8 +7,7 @@
       <table class="collapse spacing">
         <HeadTableNFComponentVue />
         <RowsTableNFComponentVue
-          :dataBuyers=dataBuyers
-          :dataProviders=dataProviders
+          :dataInvoices=dataInvoices
         />
       </table>
     </div>
@@ -20,16 +19,8 @@ import axiosFunctions from '@/composables/AxiosFunctions';
 import HeadTableNFComponentVue from './HeadTableNFComponent.vue';
 import RowsTableNFComponentVue from './RowsTableNFComponent.vue';
 
-const fetchBuyers = async () => {
-  const fetchResult = await axiosFunctions('http://localhost:3333/buyers');
-
-  const result = await fetchResult;
-
-  return result;
-};
-
-const fetchProviders = async () => {
-  const fetchResult = await axiosFunctions('http://localhost:3333/providers');
+const fetchInvoices = async () => {
+  const fetchResult = await axiosFunctions('http://localhost:3333/invoices');
 
   const result = await fetchResult;
 
@@ -44,15 +35,12 @@ export default {
   },
   data() {
     return {
-      dataBuyers: this.dataBuyers,
-      dataProviders: this.dataProviders,
+      dataInvoices: this.dataInvoices,
     };
   },
   async created() {
-    const buyersResponse = fetchBuyers();
-    this.dataBuyers = await buyersResponse;
-    const providersResponse = fetchProviders();
-    this.dataProviders = await providersResponse;
+    const invoicesResponse = fetchInvoices();
+    this.dataInvoices = await invoicesResponse;
   },
 };
 </script>

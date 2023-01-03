@@ -1,17 +1,24 @@
 <template>
-  <tr class="invoices" v-for="dataBuyer in dataBuyers" :key="dataBuyer.id">
-    <td>00000</td>
-    <td>{{ dataBuyer.name }}</td>
-    <td>CEDENTE 002</td>
-    <td>12/02/2020</td>
-    <td>R$ 1.000,00</td>
-    <td class="status">RECEBIDO</td>
+  <tr
+    class="invoices"
+    v-for="dataInvoice in dataInvoices"
+    :key="dataInvoice.id"
+  >
+    <td>{{ dataInvoice.id }}</td>
+    <td>{{ dataInvoice.buyer.name }}</td>
+    <td>{{ dataInvoice.provider.name }}</td>
+    <td>{{ dataInvoice.emissionDate }}</td>
+    <td>{{ dataInvoice.value }}</td>
+    <td class="status">
+      {{ statusOrderFunction(dataInvoice.orderStatusBuyer) }}
+    </td>
     <GivesInButtonComponentVue />
   </tr>
 </template>
 
 <script>
 import GivesInButtonComponentVue from './GivesInButtonComponent.vue';
+import { statusOrderFunction } from '@/utis/functions';
 
 export default {
   name: 'RowsTableNFComponent',
@@ -19,10 +26,12 @@ export default {
     GivesInButtonComponentVue,
   },
   props: {
-    dataBuyers: {
+    dataInvoices: {
       required: true,
     },
-    dataProviders: {},
+  },
+  methods: {
+    statusOrderFunction,
   },
 };
 </script>
