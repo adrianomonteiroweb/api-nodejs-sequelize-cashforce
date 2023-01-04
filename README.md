@@ -7,7 +7,7 @@ Application with API in Express.js, Node.js and Sequelize ORM using MariaDB as d
 ### HOW TO RUN THE APPLICATION
 
 - yarn
-  - This project uses the Yarn package manager and therefore it is necessary to install the dependency packages with the following command:
+  - This project uses the yarn package manager and therefore it is necessary to install the dependency packages with the following command:
 
 ```bash
 yarn install
