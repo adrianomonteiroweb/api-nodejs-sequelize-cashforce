@@ -30,12 +30,18 @@ export default {
   display: flex;
   flex-direction: column;
   height: 500px;
-  width: 15%;
+  width: 20%;
 }
 
 .menu-div .logo-div {
   height: 100px;
   width: 100px;
+}
+
+.menu ul {
+  border-left: 2px solid #00ad8c;
+  height: 30px;
+  list-style-type: none;
 }
 
 @media (max-width: 1440px) {
@@ -54,8 +60,17 @@ export default {
     flex-direction: row;
     height: 50px;
     justify-content: space-between;
-    width: 90%;
+    width: 95%;
     padding: 10px;
+  }
+
+  .menu-div .logo-div {
+    height: 30px;
+  }
+
+  .menu ul {
+    border: 0;
+    border-bottom: 2px solid #00ad8c;
   }
 }
 </style>

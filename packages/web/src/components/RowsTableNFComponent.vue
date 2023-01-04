@@ -8,7 +8,9 @@
     <td>{{ dataInvoice.buyer.name }}</td>
     <td>{{ dataInvoice.provider.name }}</td>
     <td>{{ formatDate(dataInvoice.emissionDate) }}</td>
-    <td>{{ formatValueBRLCurrencyFunction(dataInvoice.value) }}</td>
+    <td class="value">
+      {{ formatValueBRLCurrencyFunction(dataInvoice.value) }}
+    </td>
     <td class="status">
       {{ statusOrderFunction(dataInvoice.orderStatusBuyer) }}
     </td>
@@ -44,11 +46,16 @@ export default {
 
 <style>
 .invoices {
-  border: 1px solid #dfe2eb;
+  border: 1px solid black;
 }
 
-.status {
+.status,
+.value {
   color: #00ad8c;
+}
+
+.invoices td {
+  text-align: center;
 }
 
 @media (max-width: 1440px) {
@@ -63,6 +70,18 @@ export default {
 @media (max-width: 768px) {
   .invoices td {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 570px) {
+  .invoices td {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .invoices td {
+    font-size: 4px;
   }
 }
 </style>

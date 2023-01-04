@@ -52,43 +52,76 @@ export default {
   flex-direction: column;
   height: 500px;
   justify-content: center;
-  width: 85%;
+  width: 100%;
+  padding: 5px;
 }
 
 .content-div .bar {
-  height: 20px;
-  border-bottom: 1px solid black;
-  width: 90%;
+  height: 5%;
+  border-bottom: 1px solid #727d94;
+  width: 98%;
+  padding: 5px;
 }
 
 .content-div .content {
   height: 90%;
+  width: 100%;
+  padding: 0px;
 }
 
 .content h1 {
   color: #021b51;
+  font-size: 24px;
 }
 
 .content span {
   color: #727d94;
+  font-size: 18px;
 }
 
 .content table {
   margin-top: 20px;
-  border-spacing: 20px 20px;
+  border-spacing: 5px 0px;
+  width: 95%;
+  padding: 5px;
 }
 
 .spacing {
   border-collapse: separate;
-  border-spacing: 20px;
-}
-
-@media (max-width: 1440px) {
-}
-
-@media (max-width: 1024px) {
+  border-spacing: 5px 0px;
 }
 
 @media (max-width: 768px) {
+  .content-div {
+    width: 95%;
+  }
+
+  .content h1 {
+    font-size: 20px;
+  }
+
+  .content span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .content h1 {
+    font-size: 14px;
+  }
+
+  .content span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .content h1 {
+    font-size: 12px;
+  }
+
+  .content span {
+    font-size: 10px;
+  }
 }
 </style>
