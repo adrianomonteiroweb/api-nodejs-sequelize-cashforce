@@ -33,6 +33,12 @@ yarn install
       yarn start:api
     ```
 
+    - To run all tests, run the following command:
+
+    ```bash
+      yarn test:api
+    ```
+
 - FRONT-END
 
   - To run the frontend, run the command:
